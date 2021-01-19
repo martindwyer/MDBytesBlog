@@ -1,0 +1,115 @@
+body:after {
+  content: "";
+  position: fixed; /* stretch a fixed position to the whole screen */
+  top: 0;
+  height: 100vh; /* fix for mobile browser address bar appearing disappearing */
+  left: 0;
+  right: 0;
+  z-index: -1; /* needed to keep in the background */
+  background: url("../images/background-image.jpg") top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#page-indicator {
+  display: none;
+}
+
+.btn {
+  background-color: #ff6a00;
+  border: 1px solid #ff6a00;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #818181;
+  border: 1px solid #818181;
+}
+
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.container-fluid {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.logo-style {
+  font-family: "MuseoModerno", cursive;
+  font-size: 1.5em;
+  font-weight: 1000;
+  letter-spacing: -0.1em;
+  color: #ff6a00;
+}
+
+.name-style {
+  font-family: "MuseoModerno", cursive;
+  font-size: 1.25em;
+  color: #818181;
+  letter-spacing: -0.05em;
+}
+
+.name-style-white {
+  font-family: "MuseoModerno", cursive;
+  font-size: 1.25em;
+  color: #ffffff;
+  letter-spacing: -0.05em;
+}
+
+#site-logo {
+  height: 60px;
+}
+
+#nav-greeting {
+  display: none;
+}
+
+.jumbotron {
+  padding-top: 150px;
+  background-color: rgba(0, 0, 0, 0);
+
+  color: white;
+}
+
+.jumbotron hr {
+  background-color: white;
+  border: 1px solid white;
+}
+
+#jumbotron-image {
+  width: 100%;
+  margin-left: -20px;
+  max-width: 70vw;
+}
+
+#jumbotron-message {
+  margin-left: 2em;
+  width: 100%;
+  max-width: 500px;
+}
+
+#jumbotron-message > p.lead {
+  font-weight: 700;
+}
+
+.page-container {
+  background-color: #f2f2f2;
+  min-height: 70vh;
+  padding: 4em 1em 4em 1em;
+  padding-bottom: 4em;
+}
+
+.page-header {
+  text-align: center;
+  padding: 3em 0em 3em 0em;
+}
