@@ -1,0 +1,14 @@
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  .page-container {
+    padding: 3em;
+  }
+}
+
+@media (min-width: 1200px) {
+}

@@ -6,7 +6,7 @@ body:after {
   left: 0;
   right: 0;
   z-index: -1; /* needed to keep in the background */
-  background: url("../images/background-image.jpg") top center;
+  background: url("../images/laptop-2838921_1280.jpg") top center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -22,9 +22,34 @@ body {
   display: none;
 }
 
+h1 {
+  font-family: "MuseoModerno", cursive;
+  font-size: 1.5em;
+  font-weight: 1000;
+  letter-spacing: -0.1em;
+  color: #ffffff;
+}
+
+h2 {
+  font-family: "MuseoModerno", cursive;
+  letter-spacing: -2px;
+  color: #ff6a00;
+}
+
+.subject-title h2 {
+  display: block;
+  margin: 1em auto;
+}
+
+a {
+  color: #ff6a00;
+  font-weight: 600;
+}
+
 .btn {
   background-color: #ff6a00;
   border: 1px solid #ff6a00;
+  color: #ffffff;
 }
 
 .btn:hover,
@@ -75,9 +100,9 @@ body {
 }
 
 .jumbotron {
+  margin-bottom: 0em !important;
   padding-top: 150px;
-  background-color: rgba(0, 0, 0, 0);
-
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
 }
 
@@ -98,18 +123,43 @@ body {
   max-width: 500px;
 }
 
-#jumbotron-message > p.lead {
-  font-weight: 700;
+#jumbotron-message-detail > p:nth-child(1) {
+  font-weight: 600;
 }
 
 .page-container {
   background-color: #f2f2f2;
   min-height: 70vh;
-  padding: 4em 1em 4em 1em;
+  padding: 1em;
   padding-bottom: 4em;
 }
 
 .page-header {
   text-align: center;
   padding: 3em 0em 3em 0em;
+}
+
+.card {
+  padding: 1em 0em;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+#home-first-col {
+  background-color: white;
+}
+
+#home-first-col .card {
+  background-color: white;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+#home-first-col .card .card-body {
+  padding-right: 0em;
+  padding-left: 0em;
+}
+
+div.card.feature-posts {
+  padding-top: 0em;
 }
