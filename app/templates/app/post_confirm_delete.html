@@ -1,0 +1,17 @@
+{% extends "app/base.html" %} {% block content %} {% load static %}
+    <div>{% include 'app/includes/page-jumbo.html' %}</div>
+    <div class="page-container">
+        <div id="page-indicator">Posts</div>
+        <div class="container">
+            <form method="POST">
+                {% csrf_token %}
+
+                Confirm delete of {{ object }}?
+                <button type="submit"><i class="far fa-trash-alt fa-3x"></i></button>
+                <a href="{% url 'post_list' %}"><i class="fas fa-ban fa-3x"></i></a>
+
+            </form>
+        </div>
+
+    </div>
+{% endblock %}

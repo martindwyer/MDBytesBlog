@@ -1,18 +1,20 @@
 {% load static %}
 
 <div id="page-jumbo" class="jumbotron">
-  <div id="jumbotron-message">
-    <h1 class="display-4">{{ title }}</h1>
-    <div id="jumbotron-message-detail">
-      <p class="lead">{{ message }}</p>
-      <hr class="my-4" />
-      <p>
-        Another high-performance website built by <span class="logo-style">md </span>
-        <span class="name-style-white">Bytes</span>
-      </p>
-      <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Read Posts</a>
-      </p>
+    <div class="container">
+        <div id="jumbotron-message">
+            <h1 class="display-4">{{ title }}</h1>
+            <div id="jumbotron-message-detail">
+                <p class="lead">{{ message }}</p>
+                <hr class="my-4"/>
+                <p>
+                    Another high-performance website built by <span class="logo-style">md </span>
+                    <span class="name-style-white">Bytes</span>
+                </p>
+                <p class="lead">
+                    <a class="btn btn-primary btn-lg" href="{% url 'post_list' %}" role="button">Read Posts</a>
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
 </div>

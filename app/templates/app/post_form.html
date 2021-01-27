@@ -1,0 +1,23 @@
+{% extends "app/base.html" %} {% block content %} {% load static %}
+    <div>{% include 'app/includes/page-jumbo.html' %}</div>
+    <div class="page-container">
+        <div id="page-indicator">Posts</div>
+        <div class="container">
+            <h3>Create New Post</h3>
+
+            <form method="POST">
+                {% csrf_token %}
+
+                {{ form.as_p }}
+
+                <button type="submit" class="btn btn-default">Save</button>
+            </form>
+
+            <script>
+                let editor;
+                editor = new MediumEditor('.editable');
+            </script>
+        </div>
+
+    </div>
+{% endblock %}

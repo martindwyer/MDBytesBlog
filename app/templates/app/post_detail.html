@@ -1,0 +1,54 @@
+{% extends "app/base.html" %} {% block content %} {% load static %}
+    <div>{% include 'app/includes/post-detail-jumbo.html' %}</div>
+    <div class="page-container">
+        <div id="page-indicator">Posts</div>
+        <div class="container">
+        <div class="post-content">
+            <h3>{{ post.title }}</h3>
+
+            {% if post.published_date %}
+                <div class="data postdate">
+                    {{ post.published_date }}
+                </div>
+            {% else %}
+                <a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
+            {% endif %}
+
+            <div class="post-body">{{ post.text|safe }}</div>
+
+            {% if user.is_authenticated %}
+                <a class="site-icon" href="{% url 'post_edit' pk=post.pk %}"><i class="far fa-edit fa-3x"></i></a>
+                <a class="site-icon" href="{% url 'post_remove' pk=post.pk %}"><i class="fas fa-trash fa-3x"></i></a>
+            {% endif %}
+        </div>
+
+            <hr>
+            <h6>Post Comments ( {{ post.approve_comments.count }} )</h6>
+
+            {% for comment in post.comments.all %}
+                <div class="post-comment">
+                    {% if user.is_authenticated or comment.approved_comment %}
+                        <p>{{ comment.text|safe|linebreaks }}</p>
+                        <p style="font-size: .9em;">Posted By: {{ comment.author }}<br>
+                            On: {{ comment.created_date }}</p>
+                        {% if not comment.approved_comment %}
+                            <a class="site-icon" href="{% url 'comment_remove' pk=comment.pk %}"><i
+                                    class="fas fa-trash fa-3x"></i></a>
+                            <a class="site-icon" href="{% url 'comment_approve' pk=comment.pk %}"><i
+                                    class="far fa-thumbs-up fa-3x"></i></a>
+                        {% endif %}
+
+                    {% endif %}
+
+                </div>
+            {% empty %}
+                <p>No comments for this post.</p>
+            {% endfor %}
+
+            <h6><a href="{% url 'add_comment_to_post' pk=post.pk %}">Add Comment</a></h6>
+
+
+        </div>
+
+    </div>
+{% endblock %}

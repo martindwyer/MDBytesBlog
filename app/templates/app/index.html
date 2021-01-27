@@ -1,134 +1,168 @@
 {% extends 'app/base.html' %} {% load static %} {% block content %}
 
-<div>{% include 'app/includes/jumbotron.html' %}</div>
-<div class="page-container">
-  <div id="page-indicator">Home</div>
+    <div>{% include 'app/includes/jumbotron.html' %}</div>
+    <div class="page-container">
+    <div id="page-indicator">Home</div>
 
-  <div class="row">
-    <!-- The first column has two 'row' components -->
-    <div id="home-first-col" class="col-md-5">
-      <div class="row subject-title"><h2>Contributors</h2></div>
-      <div class="row">
+    <div id="learn-more" class="row">
+        <!-- The first column has two 'row' components -->
+        <div id="home-first-col" class="col-md-5">
+            <div class="row subject-title"><h2>About</h2></div>
+            <div class="row">
 
-        <!-- Beginning of card -->
-        <div class="card">
-          <img class="card-img-top" src="{% static 'images/work-16x9.jpg' %}" alt="Card image cap" />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the bulk of the card's content.
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
+                <!-- Beginning of card -->
+                <div class="card">
+                    <img class="card-img-top" src="{% static 'images/work-16x9.jpg' %}" alt="Card image cap"/>
+                    <div class="card-body">
+                        <h5 class="card-title">Building Community</h5>
+                        <p class="card-text">
+                            Software development is often characterized by lots of coffee, books of documentation, and a
+                            sometimes lonely search for solutions.
+                        </p>
+
+                    </div>
+                </div>
+                <!-- end of card -->
+
+            </div>
+
+            <div class="row">
+
+                <div class="card">
+                    <img class="card-img-top" src="{% static 'images/wireframe-16x9.jpg' %}" alt="Card image cap"/>
+                    <div class="card-body">
+                        <h5 class="card-title">Delivering Designs</h5>
+                        <p class="card-text">
+                            Whether its system or user-interface design, we are always looking to expand our content to
+                            lend a helping hand.
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="card">
+                    <img class="card-img-top" src="{% static 'images/code-16x9.jpg' %}" alt="Card image cap"/>
+                    <div class="card-body">
+                        <h5 class="card-title">Software Solutions</h5>
+                        <p class="card-text">
+                            Whether its HTML, CSS, Sass, JavaScript, Python, Java or C#, we strive to provide a steady
+                            flow of effective and efficient software solutions.
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+
         </div>
-        <!-- end of card -->
 
-      </div>
+        <!-- This second column contains featured article intro -->
+        <div class="col-md-7">
+            <div class="row subject-title"><h2>Recent Posts</h2></div>
+            <div class='row'>
 
-      <div class="row">
+                <!-- beginning of card -->
+                <div class="card feature-posts">
+                    <div class="card-body">
+                        <h3 class="card-title">On Software Engineering:</h3>
+                        <h4>Ethical Issues In Software Testing</h4>
+                        <p class="card-text">
+                            <em>This post provides an overview of software failure and ethical considerations. </em>
 
-        <div class="card">
-          <img class="card-img-top" src="{% static 'images/wireframe-16x9.jpg' %}" alt="Card image cap" />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the bulk of the card's content.
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
+                        <p>Software failure is a common event with far reaching consequences.  After a comprehensive
+                            examination of English language news sources for the year 2017, software testing company
+                            Tricentis found 606 software failures reported by 314 companies, impacting 3.7 billion
+                            people, costing $1.7 trillion dollars (Tricentis, 2017).  The ethical and non-ethical
+                            implications of these failures are far reaching.</p>
+
+                        <p>The <em>Software Engineering Code of Ethics and Professional Practice</em> is made up of
+                            eight principles related to the public, clients and employers, product standards, judgment,
+                            management, profession, collegues, and self (Association for Computing Machinery, 1997). The
+                            code provides a general framework to provide and explain fundamental principles as opposed
+                            to promoting “blind reliance on detailed regulations”  (<em>The software engineering code of
+                                ethics and professional practice</em>, PREAMBLE).   In total, the code represents the
+                            software engineers ethical responsibilities as a professional.  Violations in the code, such
+                            as ensuring adequate testing has been completed before putting a software product into
+                            production, could easily lead to software failure.</p>
+
+                        <p>For a more detailed discussion of ethical issues in software quality, one can look to
+                            Nindel-Edwards and Steinke (2008).  After providing an overview of industry standards and
+                            criteria for ethical software development, Nindel-Edwards and Steinke suggest testing
+                            standards for ethical quality assurance. These standards are summarized below
+                            (Nindel-Edwards &amp; Steinke, 2008, p. 57): </p>
+                        <ol>
+                            <li>Testing software functionality and recording all results, including defects.</li>
+                            <li>Testing plans and test cases should go beyond positive testing of functionality to
+                                include cases with predictable error conditions.
+                            </li>
+                            <li>Testing plan and test cases should go beyond the intended deployment environment to
+                                include likely scenarios.
+                            </li>
+                            <li>Disclosure to the project team of all tests executed, results, and findings including
+                                defects.
+                            </li>
+                        </ol>
+                        <p>Application of these standards can systematize ethical practices and prevent software failure
+                            <a id="home-feature" href="{% url 'post_detail' pk=6 %}">...read more</a></p>
+                        </p>
+
+                    </div>
+                </div>
+                <!-- end of card -->
+
+            </div>
+            <!-- end of row -->
+            <hr>
+            <!-- beginning of row -->
+            <div class='row'>
+
+                <!-- beginning of card -->
+                <div class="card feature-posts">
+                    <div class="card-body">
+                        <h3 class="card-title">On System Design:</h3>
+                        <h4>Immutable Classes and Objects</h4>
+                        <p class="card-text">
+                            This week’s post offers a review of the concept of immutable classes, and suggestions for
+                            best practices in implementation. An immutable class is “a class whose instances cannot be
+                            modified” (Bloch, 2018, p. 80) . There are many well-known immutable classes in the Java
+                            platform libraries such as String and primitive classes like Integer and Double (Temre,
+                            2015). To illustrate consider a simple example of a Car class. <a id="home-feature"
+                                                                                              href="{% url 'post_detail' pk=7 %}">...read more</a>
+                        </p>
+
+                    </div>
+                </div>
+                <!-- end of card -->
+
+            </div>
+            <hr>
+            <div class="row">
+                <!-- beginning of card -->
+                <div class="card feature-posts">
+                    <div class="card-body">
+                        <h3 class="card-title">On Coding Solutions:</h3>
+                        <h4>Returning n<sup>th</sup> Element of Fibonacci Series</h4>
+                        <p class="card-text">
+                            A Fibonacci series (0, 1, 1, 2, 3, 5, 8, 13, 21...) has as its first 2 values, 0 and 1. Each
+                            successive value is then calculated as the sum of the previous two values. For this
+                            exercise, the n’th element of the series, written fib(n), and is defined <a
+                                id="home-feature" href="{% url 'post_detail' pk=8 %}">...read more</a>
+                        </p>
+
+                    </div>
+                </div>
+                <!-- end of card -->
+
+
+            </div>
+            <!-- end of row -->
         </div>
-
-      </div>
-
-      <div class="row">
-
-        <div class="card">
-          <img class="card-img-top" src="{% static 'images/work-16x9.jpg' %}" alt="Card image cap" />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the bulk of the card's content.
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-
-      </div>
-      
+        <!-- end of col 2 -->
     </div>
-
-    <!-- This second column contains featured article intro -->
-    <div class="col-md-7">
-      <div class="row subject-title"><h2>Recent Posts</h2></div>
-      <div class='row'>        
-        
-        <!-- beginning of card -->
-        <div class="card feature-posts">
-          <div class="card-body">
-            <h3 class="card-title">On Software Engineering:</h3>
-            <h4>Ethical Issues In Software Testing</h4>
-            <p class="card-text">
-              <em>This post provides an overview of software failure and ethical considerations. </em>
-
-              <p>Software failure is a common event with far reaching consequences.  After a comprehensive examination of English language news sources for the year 2017, software testing company Tricentis found 606 software failures reported by 314 companies, impacting 3.7 billion people, costing $1.7 trillion dollars (Tricentis, 2017).  The ethical and non-ethical implications of these failures are far reaching.</p>
-
-              <p>The <em>Software Engineering Code of Ethics and Professional Practice</em> is made up of eight principles related to the public, clients and employers, product standards, judgment, management, profession, collegues, and self (Association for Computing Machinery, 1997). The code provides a general framework to provide and explain fundamental principles as opposed to promoting “blind reliance on detailed regulations”  (<em>The software engineering code of ethics and professional practice</em>, PREAMBLE).   In total, the code represents the software engineers ethical responsibilities as a professional.  Violations in the code, such as ensuring adequate testing has been completed before putting a software product into production, could easily lead to software failure.</p>
-
-              <p>For a more detailed discussion of ethical issues in software quality, one can look to Nindel-Edwards and Steinke (2008).  After providing an overview of industry standards and criteria for ethical software development, Nindel-Edwards and Steinke suggest testing standards for ethical quality assurance.   These standards are summarized below (Nindel-Edwards &amp; Steinke, 2008, p. 57): </p>
-              <ol>
-                <li>Testing software functionality and recording all results, including defects.</li>
-                <li>Testing plans and test cases should go beyond positive testing of functionality to include cases with predictable error conditions.</li>
-                <li>Testing plan and test cases should go beyond the intended deployment environment to include likely scenarios.</li>
-                <li>Disclosure to the project team of all tests executed, results, and findings including defects.</li>
-              </ol>
-              <p>Application of these standards can systematize ethical practices and prevent software failure <a id="home-feature" href="#">...read more</a></p>
-            </p>
-            
-          </div>
-        </div>
-        <!-- end of card -->
-    
-      </div>
-      <!-- end of row -->
-      <hr>
-      <!-- beginning of row -->
-      <div class='row'>        
-        
-        <!-- beginning of card -->
-        <div class="card feature-posts">
-        <div class="card-body">
-          <h3 class="card-title">On System Design:</h3>
-          <h4>Immutable Classes and Objects</h4>
-          <p class="card-text">
-            This week’s post offers a review of the concept of immutable classes, and suggestions for best practices in implementation.  An immutable class is “a class whose instances cannot be modified” (Bloch, 2018, p. 80) .  There are many well-known immutable classes in the Java platform libraries such as String and primitive classes like Integer and Double (Temre, 2015). To illustrate consider a simple example of a Car class. <a id="home-feature" href="#">...read more</a>
-          </p>
-          
-        </div>
-      </div>
-      <!-- end of card -->
-
-    </div>
-    <hr>
-      <div class="row">
-      <!-- beginning of card -->
-      <div class="card feature-posts">
-        <div class="card-body">
-          <h3 class="card-title">On Coding Solutions:</h3>
-          <h4>Returning n<sup>th</sup> Element of Fibonacci Series</h4>
-          <p class="card-text">
-            A Fibonacci series (0, 1, 1, 2, 3, 5, 8, 13, 21...) has as its first 2 values, 0 and 1. Each successive value is then calculated as the sum of the previous two values.  For this exercise, the n’th element of the series, written fib(n), and is defined  <a id="home-feature" href="#">...read more</a>
-          </p>
-          
-        </div>
-      </div>
-      <!-- end of card -->
-      
-
-    </div>
-    <!-- end of row -->
-  </div>
-  <!-- end of col 2 -->
-</div>
-<!-- end of page-container class -->
-    {% endblock %}
+    <!-- end of page-container class -->
+{% endblock %}
   

@@ -1,11 +1,18 @@
 {% extends "app/base.html" %} {% block content %}
 
-<div>{% include 'app/includes/page-jumbo.html' %}</div>
+    <div>{% include 'app/includes/page-jumbo.html' %}</div>
 
-<div class="page-container">
-  <div id="page-indicator">Contact</div>
-  <div class="container">
-    <h5>Contact Form Under Development</h5>
-  </div>
-</div>
+    <div class="page-container">
+        <div id="page-indicator">Contact</div>
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id='contact-form' method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="form-actions">
+                    <button id="email-button" type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
 {% endblock %}

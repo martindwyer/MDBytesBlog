@@ -14,8 +14,13 @@ body:after {
 }
 
 body {
+  font-family: "Poppins", sans-serif;
   padding: 0;
   margin: 0;
+}
+
+.container {
+  max-width: 1028px;
 }
 
 #page-indicator {
@@ -29,11 +34,35 @@ h1 {
   letter-spacing: -0.1em;
   color: #ffffff;
 }
+#detail-heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 3em;
+}
+#page-jumbo h1 {
+  letter-spacing: -0em;
+
+}
+
+button {
+  border: none;
+  color: #8b4513;
+}
+
+button:hover {
+  cursor: pointer;
+
+}
+
 
 h2 {
   font-family: "MuseoModerno", cursive;
   letter-spacing: -2px;
   color: #ff6a00;
+}
+
+h3, h4, h5, h6 {
+  color: #ff6a00;
+
 }
 
 .subject-title h2 {
@@ -42,8 +71,15 @@ h2 {
 }
 
 a {
-  color: #ff6a00;
+  color: #8b4513;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #818181;
   font-weight: 600;
+  font-size: 105%;
 }
 
 .btn {
@@ -96,8 +132,29 @@ a {
 }
 
 #nav-greeting {
-  display: none;
+  margin-left: 25px;
 }
+
+#logoutForm {
+
+}
+
+#user-options {
+
+}
+
+#home-jumbotron {
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-top: 5vh;
+
+}
+
+#home-jumbotron #jumbotron-message {
+  margin: 15vh auto 0em auto;
+
+}
+
 
 .jumbotron {
   margin-bottom: 0em !important;
@@ -127,6 +184,10 @@ a {
   font-weight: 600;
 }
 
+#detail-jumbotron-message {
+  text-align:center;
+  min-height: 30vh;
+}
 .page-container {
   background-color: #f2f2f2;
   min-height: 70vh;
@@ -163,3 +224,104 @@ a {
 div.card.feature-posts {
   padding-top: 0em;
 }
+
+form label {
+  width: 6em;
+}
+
+.post-text-input {
+  width: 80vw;
+  max-width: 800px;
+  min-height: 40vh;
+  overflow:scroll;
+  font-family: "Courier New", sans-serif;
+
+}
+
+.site-icon {
+
+  margin-right: 3em;
+}
+
+.site-icon i {
+  margin-top: 1em;
+}
+
+.post-code {
+  padding: 1.5em;
+  width: 90%;
+  margin: 0% 5%;
+  background-color: #ffffff;
+
+}
+
+.code-block {
+  padding-left: 1.5em;
+  border-left: 2px solid #0000ff;
+}
+
+.comment-text-input {
+  display: block;
+  overflow: scroll;
+  background-color: #ffffff;
+  border: 1px solid black;
+  width: 80%;
+  max-width: 800px;
+  min-height: 30vh;
+}
+
+.post {
+  background-color: #ffffff;
+ padding: 1.5em;
+}
+
+.post-content {
+ background-color: #ffffff;
+ padding: 1.5em;
+}
+
+.post-body {
+  margin-top: 1.5em;
+}
+
+.post-comment {
+  width: 90%;
+  padding: 1.5em;
+  background-color: #ffffff;
+  margin: 1em auto 3em auto;
+}
+
+#title-heading img {
+  max-width: 100%;
+}
+
+#about-info {
+  padding: 2em;
+}
+
+#contact-form label {
+  width: 12em;
+}
+
+#contact-form p {
+  width: 80%;
+  display: flex;
+  align-content: space-between;
+
+}
+
+
+#contact-form > p:nth-child(4) > label {
+  display:flex;
+  align-content: flex-start;
+
+}
+
+#email-button {
+  background-color: #ff6a00;
+  color: white;
+  border: 1px solid #ff6a00;
+  height: 2em;
+  border-radius: .15em;
+}
+

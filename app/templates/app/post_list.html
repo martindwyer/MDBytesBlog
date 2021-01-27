@@ -1,0 +1,23 @@
+{% extends "app/base.html" %} {% block content %} {% load static %}
+    <div>{% include 'app/includes/page-jumbo.html' %}</div>
+    <div class="page-container">
+        <div id="page-indicator">Posts</div>
+        <div class="container">
+
+            {% for post in post_list %}
+                <div class="post">
+                    <h4><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h4>
+                    <div class="date"><p>Published on: {{ post.published_date|date:"D M Y" }}</p></div>
+                    <p>{{ post.text|safe|truncatechars:400 }} <a href="{% url 'post_detail' pk=post.pk %}"> read more ...</a></p>
+                    <a href="{% url 'post_detail' pk=post.pk %}">Comments: ( {{ post.approve_comments.count }} )</a>
+                </div>
+                <hr>
+            {% empty %}
+                <div>No posts at this time.</div>
+            {% endfor %}
+
+
+        </div>
+
+    </div>
+{% endblock %}
