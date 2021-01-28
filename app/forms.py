@@ -46,8 +46,12 @@ class CommentForm(forms.ModelForm):
 
 
 class ContactForm(forms.Form):
-    from_email = forms.EmailField(label='Your Email Address',required=True)
-    subject = forms.CharField(label='Subject',required=True)
-    message = forms.CharField(label='Message',widget=forms.Textarea, required=True)
-
-
+    from_email = forms.EmailField(label='Your Email Address', required=True,
+                                  error_messages={
+                                      'required': 'A valid email address is '
+                                                  'required.'})
+    subject = forms.CharField(label='Subject', required=True, error_messages={
+        'required': 'A subject is required.'})
+    message = forms.CharField(label='Message', widget=forms.Textarea,
+                              required=True, error_messages={
+            'required': 'Message content is required.'})

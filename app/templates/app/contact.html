@@ -4,15 +4,67 @@
 
     <div class="page-container">
         <div id="page-indicator">Contact</div>
-        <div class="container">
+        <div class="container" id="contact-page-content">
             <h2>Contact Us</h2>
             <form id='contact-form' method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <div class="form-actions">
-                    <button id="email-button" type="submit">Send</button>
+                <div id="submit-email-container" class="form-actions">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"
+                            id="submit-email">Submit
+                    </button>
+                </div>
+                <div id="send-email-button">
+                    <button id="email-button" type="submit" disabled>Send</button>
                 </div>
             </form>
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                 aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Confirm Submit</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Thanks for sending us a message. Once you confirm submit below we will make every effort to
+                            reply within 24 hours.
+                        </div>
+                        <div class="modal-footer">
+                            <button id="close-it" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button id="send-now" type="button"  onclick="sendEmailMessage()" class="btn btn-primary">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                const sendEmailMessage = () => {
+                    let isValidEmail = document.querySelector('#id_from_email').checkValidity();
+                    let isValidSubject = document.querySelector('#id_subject').checkValidity();
+                    let isValidMessage = document.querySelector('#id_message').checkValidity();
+
+                    if(isValidEmail && isValidSubject && isValidMessage) {
+                        document.querySelector("#email-button").disabled = false;
+                        document.querySelector("#email-button").click();
+                        document.querySelector("#email-button").disabled = true;
+                    } else {
+                        document.querySelector("#email-button").disabled = false;
+                        document.querySelector("#close-it").click();
+                        document.querySelector("#contact-form").submit();
+                        document.querySelector("#email-button").disabled = true;
+
+                    }
+
+
+
+
+                }
+
+
+            </script>
+
         </div>
     </div>
 {% endblock %}

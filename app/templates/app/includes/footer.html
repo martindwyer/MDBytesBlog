@@ -1,60 +1,68 @@
 {% load static %}
 
 <div id="footer" class="border-top">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-12 col-md">
-        <div id="social-media">
-          <h5>Social Media</h5>
-          <a href="https://twitter.com/MDBytes" class="text-dark">
-            <img class="social-icon" src="{% static 'images/twitter.png' %}" alt="twitter logo" />
-          </a>
-          <a href="https://www.facebook.com/mdbytes" class="text-dark">
-            <img class="social-icon" src="{% static 'images/facebook.png' %}" alt="facebook logo" />
-          </a>
-          <a href="https://www.linkedin.com/in/mdbytes/" class="text-dark">
-            <img class="social-icon" src="{% static 'images/linked-in.png' %}" alt="linked in logo" />
-          </a>
-        </div>
-        <div id="copyright">
-          <h5>
-            <span class="logo-style">md </span>
-            <span class="name-style">Bytes</span>
-          </h5>
-          <small class="d-block mb-3 text-muted">&copy; 2020</small>
-        </div>
-      </div>
-      <div class="col-6 col-md">
-        <h5>
-          <NavLink to="/services">Services</NavLink>
-        </h5>
-        <ul class="list-unstyled text-small">
-          <li>Mobile-Ready Websites</li>
-          <li>Integrated Business Applications</li>
-          <li>Mobile Applications</li>
-        </ul>
-      </div>
-      <div class="col-6 col-md">
-        <h5>
-          <NavLink to="/portfolio">Portfolio</NavLink>
-        </h5>
-        <ul class="list-unstyled text-small">
-          <li>Python Django and Flask</li>
-          <li>Node.js, Express, React</li>
-          <li>Java Spring Framework</li>
-        </ul>
-      </div>
-      <div id="footer-profile-photo" class="col-12 col-6 col-md">
-        <div>
-          <img src="{% static 'images/profile-photo.png' %}" alt="photo of developer martin dwyer" />
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md">
+                <div id="social-media">
+                    <h5>Social Media</h5>
+                    <a href="https://twitter.com/MDBytes" class="text-dark">
+                        <img class="social-icon" src="{% static 'images/twitter.png' %}" alt="twitter logo"/>
+                    </a>
+                    <a href="https://www.facebook.com/mdbytes" class="text-dark">
+                        <img class="social-icon" src="{% static 'images/facebook.png' %}" alt="facebook logo"/>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mdbytes/" class="text-dark">
+                        <img class="social-icon" src="{% static 'images/linked-in.png' %}" alt="linked in logo"/>
+                    </a>
+                </div>
+                <div id="copyright">
+                    <h5>
+                        <span class="logo-style">md </span>
+                        <span class="name-style">Bytes</span>
+                    </h5>
+                    <small class="d-block mb-3 text-muted">&copy; 2020</small>
+                </div>
+            </div>
+            <div class="col-6 col-md">
+                <h5>
+                    <a href="https://mdbytes.com" target="_blank" referrerpolicy="no-referrer"><span class="logo-style">md </span>
+                        <span class="name-style">Bytes</span></a>
+                </h5>
+                <ul class="list-unstyled text-small">
+                    <li>Mobile-Ready Websites</li>
+                    <li>Integrated Business Applications</li>
+                    <li>Mobile Applications</li>
+                    <li>e-Commerce Solutions</li>
+                    <li>Social Media Management</li>
+                    <li>Web Analytics</li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>
+                    <a href="{% url 'index' %}" target="_blank" referrerpolicy="no-referrer"><span class="logo-style">md </span>
+                        <span class="name-style">Bytes</span><span class="blog-style"> > Blog</span></a>
+                </h5>
+                <ul class="list-unstyled text-small">
+                    <li>Development Insights</li>
+                    <li>Developer Tools</li>
+                    <li>Software Solutions</li>
+                    <li>Java, C#, Python, JavaScript</li>
+                    <li>MySQL, SQL, MariaDB, MongoDB</li>
+                    <li>WordPress, Django, Flask</li>
+                </ul>
+            </div>
+            <div id="footer-profile-photo" class="col-12 col-6 col-md">
+                <div>
+                    <img src="{% static 'images/profile-photo.png' %}" alt="photo of developer martin dwyer"/>
 
-          <p>
-            Martin Dwyer
-            <br />
-            Managing Director
-          </p>
+                    <p>
+                        Martin Dwyer
+                        <br/>
+                        Managing Director
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>

@@ -14,7 +14,7 @@ body:after {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -117,6 +117,13 @@ a:hover {
   font-family: "MuseoModerno", cursive;
   font-size: 1.25em;
   color: #818181;
+  letter-spacing: -0.05em;
+}
+
+.blog-style {
+  font-family: "MuseoModerno", cursive;
+  font-size: 1.00em;
+  color: #818181 !important;
   letter-spacing: -0.05em;
 }
 
@@ -293,35 +300,5 @@ form label {
 
 #title-heading img {
   max-width: 100%;
-}
-
-#about-info {
-  padding: 2em;
-}
-
-#contact-form label {
-  width: 12em;
-}
-
-#contact-form p {
-  width: 80%;
-  display: flex;
-  align-content: space-between;
-
-}
-
-
-#contact-form > p:nth-child(4) > label {
-  display:flex;
-  align-content: flex-start;
-
-}
-
-#email-button {
-  background-color: #ff6a00;
-  color: white;
-  border: 1px solid #ff6a00;
-  height: 2em;
-  border-radius: .15em;
 }
 

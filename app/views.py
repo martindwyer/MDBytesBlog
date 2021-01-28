@@ -26,7 +26,7 @@ def about(request):
         'app/about.html',
         {
             'title': 'About',
-            'message': 'Your application description page.',
+            'message': 'Insights on our contributors',
             'year': datetime.now().year,
         }
     )
@@ -132,9 +132,11 @@ def contact_view(request):
     else:
         form = ContactForm(request.POST)
         if form.is_valid():
-            subject = form.cleaned_data['subject']
+            subject = "Message From MDBytes > Blog"
             from_email = form.cleaned_data['from_email']
-            message = form.cleaned_data['message'] + from_email
+            message = "Subject: " + form.cleaned_data[
+                'subject'] + "\n\nMessage:\n" + form.cleaned_data[
+                          'message'] + "\n\nReply to: " + from_email
             try:
                 send_mail(subject, message, 'martin@mdbytes.com',
                           ['martin.b.dwyer@gmail.com'], fail_silently=False)
@@ -143,7 +145,7 @@ def contact_view(request):
             return redirect('index')
     return render(request, "app/contact.html", {
         'title': 'Contact',
-        'message': 'Your contact page.',
+        'message': 'Send us a message today',
         'year': datetime.now().year,
         'form': form
     }

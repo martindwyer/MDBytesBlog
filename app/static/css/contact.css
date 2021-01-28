@@ -1,0 +1,47 @@
+
+#contact-page-content {
+    background-color: #ffffff;
+    padding: 2em;
+}
+
+#submit-email-container {
+    width: 100%;
+}
+
+#submit-email {
+    margin-left: 20%;
+}
+
+#send-email-button {
+    visibility: hidden;
+}
+
+#contact-form p {
+    width: 100%;
+    display: flex;
+    align-content: flex-start;
+}
+
+#contact-form > p > label {
+    min-width: 20%;
+}
+
+#contact-form > p > input {
+    width: 60%;
+}
+
+#id_message {
+    width: 80%;
+
+}
+
+.errorlist li {
+    list-style: none;
+    text-decoration: none;
+    color: #ff0000;
+    font-style:italic;
+    font-size: 70%;
+    margin-left: 20%;
+
+}
+

@@ -2,3 +2,5 @@
 .vscode
 python-anywhere
 .env
+venv
+

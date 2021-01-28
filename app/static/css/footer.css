@@ -1,33 +1,33 @@
 #footer {
-  display: block;
-  padding-top: 3em;
-  padding-right: 25px;
-  padding-bottom: 25px;
-  padding-left: 25px;
-  width: 100vw;
-  background-color: #f2f2f2;
+    display: block;
+    padding-top: 3em;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    width: 100vw;
+    background-color: #f2f2f2;
 }
 
-#footer-profile-photo > div {
-  float: right;
+
+#footer > div > div > div:nth-child(2) {
+    display: none;
 }
 
-#footer-profile-photo > div > p {
-  text-align: center;
+#footer > div > div > div:nth-child(3) {
+    display: none;
 }
 
-#footer-profile-photo img {
-  height: 150px;
-  margin-bottom: 8px;
-  border-radius: 5px;
-  box-shadow: 5px 0px 8px 8px rgba(136, 136, 136, 0.5);
+#footer-profile-photo {
+    display: none;
 }
+
 
 .social-icon {
-  height: 3em;
-  margin-right: 1.5em;
+    height: 3em;
+    margin-right: 1em;
+    margin-bottom: 1em;
 }
 
 #social-media {
-  margin-bottom: 2em;
+    margin-bottom: 2em;
 }
