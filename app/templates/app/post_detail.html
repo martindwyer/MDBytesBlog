@@ -3,24 +3,25 @@
     <div class="page-container">
         <div id="page-indicator">Posts</div>
         <div class="container">
-        <div class="post-content">
-            <h3>{{ post.title }}</h3>
+            <div class="post-content">
+                <h3>{{ post.title }}</h3>
 
-            {% if post.published_date %}
-                <div class="data postdate">
-                    {{ post.published_date }}
-                </div>
-            {% else %}
-                <a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
-            {% endif %}
+                {% if post.published_date %}
+                    <div class="data postdate">
+                        {{ post.published_date }}
+                    </div>
+                {% else %}
+                    <a class="btn btn-default" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
+                {% endif %}
 
-            <div class="post-body">{{ post.text|safe }}</div>
+                <div class="post-body">{{ post.text|safe }}</div>
 
-            {% if user.is_authenticated %}
-                <a class="site-icon" href="{% url 'post_edit' pk=post.pk %}"><i class="far fa-edit fa-3x"></i></a>
-                <a class="site-icon" href="{% url 'post_remove' pk=post.pk %}"><i class="fas fa-trash fa-3x"></i></a>
-            {% endif %}
-        </div>
+                {% if user.is_authenticated %}
+                    <a class="site-icon" href="{% url 'post_edit' pk=post.pk %}"><i class="far fa-edit fa-3x"></i></a>
+                    <a class="site-icon" href="{% url 'post_remove' pk=post.pk %}"><i
+                            class="fas fa-trash fa-3x"></i></a>
+                {% endif %}
+            </div>
 
             <hr>
             <h6>Post Comments ( {{ post.approve_comments.count }} )</h6>

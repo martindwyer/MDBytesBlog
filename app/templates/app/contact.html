@@ -33,37 +33,15 @@
                             reply within 24 hours.
                         </div>
                         <div class="modal-footer">
-                            <button id="close-it" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button id="send-now" type="button"  onclick="sendEmailMessage()" class="btn btn-primary">Send</button>
+                            <button id="close-it" type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                            </button>
+                            <button id="send-now" type="button" onclick="sendEmailMessage()" class="btn btn-primary">
+                                Send
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-            <script>
-                const sendEmailMessage = () => {
-                    let isValidEmail = document.querySelector('#id_from_email').checkValidity();
-                    let isValidSubject = document.querySelector('#id_subject').checkValidity();
-                    let isValidMessage = document.querySelector('#id_message').checkValidity();
-
-                    if(isValidEmail && isValidSubject && isValidMessage) {
-                        document.querySelector("#email-button").disabled = false;
-                        document.querySelector("#email-button").click();
-                        document.querySelector("#email-button").disabled = true;
-                    } else {
-                        document.querySelector("#email-button").disabled = false;
-                        document.querySelector("#close-it").click();
-                        document.querySelector("#contact-form").submit();
-                        document.querySelector("#email-button").disabled = true;
-
-                    }
-
-
-
-
-                }
-
-
-            </script>
 
         </div>
     </div>

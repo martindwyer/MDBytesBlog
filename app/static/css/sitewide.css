@@ -1,145 +1,146 @@
 body:after {
-  content: "";
-  position: fixed; /* stretch a fixed position to the whole screen */
-  top: 0;
-  height: 100vh; /* fix for mobile browser address bar appearing disappearing */
-  left: 0;
-  right: 0;
-  z-index: -1; /* needed to keep in the background */
-  background: url("../images/laptop-2838921_1280.jpg") top center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    content: "";
+    position: fixed; /* stretch a fixed position to the whole screen */
+    top: 0;
+    height: 100vh; /* fix for mobile browser address bar appearing disappearing */
+    left: 0;
+    right: 0;
+    z-index: -1; /* needed to keep in the background */
+    background: url("../images/laptop-2838921_1280.jpg") top center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  padding: 0;
-  margin: 0;
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 .container {
-  max-width: 1028px;
+    max-width: 1028px;
 }
 
 #page-indicator {
-  display: none;
+    display: none;
 }
 
 h1 {
-  font-family: "MuseoModerno", cursive;
-  font-size: 1.5em;
-  font-weight: 1000;
-  letter-spacing: -0.1em;
-  color: #ffffff;
+    font-family: "MuseoModerno", cursive;
+    font-size: 1.5em;
+    font-weight: 800;
+    letter-spacing: -0.1em;
+    color: #ffffff;
 }
-#detail-heading {
-  font-family: "Poppins", sans-serif;
-  font-size: 3em;
-}
-#page-jumbo h1 {
-  letter-spacing: -0em;
-
-}
-
-button {
-  border: none;
-  color: #8b4513;
-}
-
-button:hover {
-  cursor: pointer;
-
-}
-
 
 h2 {
-  font-family: "MuseoModerno", cursive;
-  letter-spacing: -2px;
-  color: #ff6a00;
+    font-family: "MuseoModerno", cursive;
+    letter-spacing: -2px;
+    color: #ff6a00;
 }
 
 h3, h4, h5, h6 {
-  color: #ff6a00;
+    color: #ff6a00;
 
 }
 
+.logo-style {
+    font-family: "MuseoModerno", cursive;
+    font-size: 1.5em;
+    font-weight: 800;
+    letter-spacing: -0.1em;
+    color: #ff6a00;
+}
+
+.name-style {
+    font-family: "MuseoModerno", cursive;
+    font-size: 1.25em;
+    color: #818181;
+    letter-spacing: -0.05em;
+}
+
+.blog-style {
+    font-family: "MuseoModerno", cursive;
+    font-size: 1.00em;
+    color: #818181 !important;
+    letter-spacing: -0.05em;
+}
+
+.name-style-white {
+    font-family: "MuseoModerno", cursive;
+    font-size: 1.25em;
+    color: #ffffff;
+    letter-spacing: -0.05em;
+}
+
+
 .subject-title h2 {
-  display: block;
-  margin: 1em auto;
+    display: block;
+    margin: 1em auto;
+}
+
+#detail-heading {
+    font-family: "Roboto", sans-serif;
+    font-size: 3em;
+}
+
+#page-jumbo h1 {
+    letter-spacing: -0em;
+}
+
+button {
+    border: none;
+    color: #8b4513;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 a {
-  color: #8b4513;
-  font-weight: 500;
+    color: #8b4513;
+    font-weight: 500;
 }
 
 a:hover {
-  text-decoration: none;
-  color: #818181;
-  font-weight: 600;
-  font-size: 105%;
+    text-decoration: none;
+    color: #818181;
+    font-weight: 600;
+    font-size: 105%;
 }
 
 .btn {
-  background-color: #ff6a00;
-  border: 1px solid #ff6a00;
-  color: #ffffff;
+    background-color: #ff6a00;
+    border: 1px solid #ff6a00;
+    color: #ffffff;
 }
 
 .btn:hover,
 .btn:active {
-  background-color: #818181;
-  border: 1px solid #818181;
+    background-color: #818181;
+    border: 1px solid #818181;
 }
 
 .btn:focus,
 .btn:active {
-  outline: none !important;
-  box-shadow: none;
+    outline: none !important;
+    box-shadow: none;
 }
 
 .container-fluid {
-  margin: 0 !important;
-  padding: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
-.logo-style {
-  font-family: "MuseoModerno", cursive;
-  font-size: 1.5em;
-  font-weight: 1000;
-  letter-spacing: -0.1em;
-  color: #ff6a00;
-}
-
-.name-style {
-  font-family: "MuseoModerno", cursive;
-  font-size: 1.25em;
-  color: #818181;
-  letter-spacing: -0.05em;
-}
-
-.blog-style {
-  font-family: "MuseoModerno", cursive;
-  font-size: 1.00em;
-  color: #818181 !important;
-  letter-spacing: -0.05em;
-}
-
-.name-style-white {
-  font-family: "MuseoModerno", cursive;
-  font-size: 1.25em;
-  color: #ffffff;
-  letter-spacing: -0.05em;
-}
 
 #site-logo {
-  height: 60px;
+    height: 60px;
 }
 
 #nav-greeting {
-  margin-left: 25px;
+    margin-left: 25px;
 }
 
 #logoutForm {
@@ -151,154 +152,86 @@ a:hover {
 }
 
 #home-jumbotron {
-  min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding-top: 5vh;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-top: 5vh;
 
 }
 
 #home-jumbotron #jumbotron-message {
-  margin: 15vh auto 0em auto;
+    margin: 15vh auto 0em auto;
 
 }
 
 
 .jumbotron {
-  margin-bottom: 0em !important;
-  padding-top: 150px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+    margin-bottom: 0em !important;
+    padding-top: 150px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
 }
 
 .jumbotron hr {
-  background-color: white;
-  border: 1px solid white;
+    background-color: white;
+    border: 1px solid white;
 }
 
 #jumbotron-image {
-  width: 100%;
-  margin-left: -20px;
-  max-width: 70vw;
+    width: 100%;
+    margin-left: -20px;
+    max-width: 70vw;
 }
 
 #jumbotron-message {
-  margin-left: 2em;
-  width: 100%;
-  max-width: 500px;
+    margin-left: 2em;
+    width: 100%;
+    max-width: 500px;
 }
 
 #jumbotron-message-detail > p:nth-child(1) {
-  font-weight: 600;
+    font-weight: 600;
 }
 
 #detail-jumbotron-message {
-  text-align:center;
-  min-height: 30vh;
+    text-align: center;
+    min-height: 30vh;
 }
+
 .page-container {
-  background-color: #f2f2f2;
-  min-height: 70vh;
-  padding: 1em;
-  padding-bottom: 4em;
+    background-color: #f2f2f2;
+    min-height: 70vh;
+    padding: 1em 1em 4em;
 }
 
 .page-header {
-  text-align: center;
-  padding: 3em 0em 3em 0em;
+    text-align: center;
+    padding: 3em 0 3em 0;
 }
 
-.card {
-  padding: 1em 0em;
-  background-color: #f2f2f2;
-  border: none;
-}
-
-#home-first-col {
-  background-color: white;
-}
-
-#home-first-col .card {
-  background-color: white;
-  padding-right: 1em;
-  padding-left: 1em;
-}
-
-#home-first-col .card .card-body {
-  padding-right: 0em;
-  padding-left: 0em;
-}
-
-div.card.feature-posts {
-  padding-top: 0em;
-}
 
 form label {
-  width: 6em;
+    width: 6em;
 }
 
 .post-text-input {
-  width: 80vw;
-  max-width: 800px;
-  min-height: 40vh;
-  overflow:scroll;
-  font-family: "Courier New", sans-serif;
+    width: 80vw;
+    max-width: 800px;
+    min-height: 40vh;
+    overflow: scroll;
+    font-family: "Courier New", sans-serif;
 
 }
 
 .site-icon {
 
-  margin-right: 3em;
+    margin-right: 3em;
 }
 
 .site-icon i {
-  margin-top: 1em;
-}
-
-.post-code {
-  padding: 1.5em;
-  width: 90%;
-  margin: 0% 5%;
-  background-color: #ffffff;
-
-}
-
-.code-block {
-  padding-left: 1.5em;
-  border-left: 2px solid #0000ff;
-}
-
-.comment-text-input {
-  display: block;
-  overflow: scroll;
-  background-color: #ffffff;
-  border: 1px solid black;
-  width: 80%;
-  max-width: 800px;
-  min-height: 30vh;
-}
-
-.post {
-  background-color: #ffffff;
- padding: 1.5em;
-}
-
-.post-content {
- background-color: #ffffff;
- padding: 1.5em;
-}
-
-.post-body {
-  margin-top: 1.5em;
-}
-
-.post-comment {
-  width: 90%;
-  padding: 1.5em;
-  background-color: #ffffff;
-  margin: 1em auto 3em auto;
+    margin-top: 1em;
 }
 
 #title-heading img {
-  max-width: 100%;
+    max-width: 100%;
 }
 

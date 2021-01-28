@@ -1,0 +1,44 @@
+
+.post-code {
+    padding: 1.5em;
+    width: 90%;
+    margin: 0% 5%;
+    background-color: #ffffff;
+
+}
+
+.code-block {
+    padding-left: 1.5em;
+    border-left: 2px solid #0000ff;
+}
+
+.comment-text-input {
+    display: block;
+    overflow: scroll;
+    background-color: #ffffff;
+    border: 1px solid black;
+    width: 80%;
+    max-width: 800px;
+    min-height: 30vh;
+}
+
+.post {
+    background-color: #ffffff;
+    padding: 1.5em;
+}
+
+.post-content {
+    background-color: #ffffff;
+    padding: 1.5em;
+}
+
+.post-body {
+    margin-top: 1.5em;
+}
+
+.post-comment {
+    width: 90%;
+    padding: 1.5em;
+    background-color: #ffffff;
+    margin: 1em auto 3em auto;
+}

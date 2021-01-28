@@ -1,50 +1,58 @@
 {% extends "app/base.html" %} {% block content %} {% load static %}
-<div>{% include 'app/includes/page-jumbo.html' %}</div>
-<div class="page-container">
-  <div id="page-indicator">About</div>
-  <div class="container">
-    <div>
-      <div class="row">
-        <div id="title-heading" class="col-sm-3">
-          <h5>Martin Dwyer</h5>
-          <h6>Founding Contributor</h6>
-          <img src="{% static 'images/profile-photo.png' %}" alt="profile photo" />
+    <div>{% include 'app/includes/page-jumbo.html' %}</div>
+    <div class="page-container">
+    <div id="page-indicator">About</div>
+    <div class="container">
+        <div>
+            <div class="row">
+                <div id="title-heading" class="col-sm-3">
+                    <h5>Martin Dwyer</h5>
+                    <h6>Founding Contributor</h6>
+                    <img src="{% static 'images/profile-photo.png' %}" alt="profile photo"/>
+                </div>
+
+                <div id="about-info" class="col-sm-9">
+                    <p>
+                        Martin Dwyer is owner and operator of <span class="logo-style">md </span>
+                        <span class="name-style">Bytes</span>
+                        , a web development concern out of Cedar Rapids, Iowa. In addition to numerous professional
+                        certifications in web development, Martin has also achieved an M.S. in Information Technology
+                        with emphasis in
+                        Software Engineering. Many of the articles written here were first conceived as part of his
+                        journey
+                        toward the M.S. degree.
+                    </p>
+
+                    <p>
+                        Martin's career spans decades of leadership in top companies which include Merrill Lynch, US
+                        Bank, Wells Fargo and Regions Bank.   But perhaps his biggest decision was prompted by a small
+                        business
+                        client he assisted while a consultant at GoDaddy.  This customer hit on a recurring theme, i.e.
+                        website
+                        developers are either impossible to find or too expensive to hire.  Since that time, his
+                        ventures have taken
+                        him from being a licensed reseller of GoDaddy web hosting to a reliable provider of small
+                        business websites and
+                        applications.
+                    </p>
+
+                    <p>
+                        Martin's favorite professional endeavors include professional development through open sharing
+                        with others. This blog was conceived as an important means to that end.
+                    </p>
+                </div>
+            </div>
+            <div id="contrib-call" class="row" style="margin-top:3em;">
+                <h5>Call for Contributors</h5>
+                <p>
+                    We are looking to expand our contributing authors. So, if you've got some experience and knowlege
+                    you would
+                    like to share, please feel free to <a href="{% url 'contact' %}">contact Martin</a>. We will get you
+                    started as soon as possible.
+                </p>
+            </div>
         </div>
-
-        <div id="about-info" class="col-sm-9">
-          <p>
-            Martin Dwyer is owner and operator of <span class="logo-style">md </span>
-            <span class="name-style">Bytes</span>
-            , a web development concern out of Cedar Rapids, Iowa. In addition to numerous professional certifications
-            in web development, Martin has also achieved an M.S. in Information Technology with emphasis in Software
-            Engineering. Many of the articles written here were first conceived as part of his journey toward the M.S.
-            degree.
-          </p>
-
-          <p>
-            Martin's career spans decades of leadership in top companies which include Merrill Lynch, US Bank, Wells
-            Fargo and Regions Bank.   But perhaps his biggest decision was prompted by a small business client he
-            assisted while a consultant at GoDaddy.  This customer hit on a recurring theme, i.e. website developers are
-            either impossible to find or too expensive to hire.  Since that time, his ventures have taken him from being
-            a licensed reseller of GoDaddy web hosting to a reliable provider of small business websites and
-            applications.
-          </p>
-
-          <p>
-            Martin's favorite professional endeavors include professional development through open sharing with others.
-            This blog was conceived as an important means to that end.
-          </p>
-        </div>
-      </div>
-      <div id="contrib-call" class="row" style="margin-top:3em;">
-        <h5>Call for Contributors</h5>
-        <p>
-          We are looking to expand our contributing authors. So, if you've got some experience and knowlege you would
-            like to share, please feel free to <a href="{% url 'contact' %}">contact Martin</a>. We will get you started as soon as possible.
-        </p>
-      </div>
     </div>
+{% endblock %}
 </div>
-    {% endblock %}
-  </div>
-</div>
+

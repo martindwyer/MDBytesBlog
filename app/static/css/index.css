@@ -1,3 +1,28 @@
 #learn-more {
     padding-top: 5em;
 }
+
+.card {
+    padding: 1em 0em;
+    background-color: #f2f2f2;
+    border: none;
+}
+
+#home-first-col {
+    background-color: white;
+}
+
+#home-first-col .card {
+    background-color: white;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+#home-first-col .card .card-body {
+    padding-right: 0em;
+    padding-left: 0em;
+}
+
+div.card.feature-posts {
+    padding-top: 0em;
+}

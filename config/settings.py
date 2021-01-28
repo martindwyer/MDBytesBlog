@@ -10,10 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-
 from pathlib import Path
 import os
 from dotenv import load_dotenv
+
 load_dotenv()
 
 print(os.getenv('DATABASE_USER'))
@@ -21,12 +21,11 @@ print(os.getenv('DATABASE_USER'))
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-APP_DIR = os.path.join(BASE_DIR,'app')
+APP_DIR = os.path.join(BASE_DIR, 'app')
 
-APP_TEMPLATES = os.path.join(APP_DIR,'templates')
-APP_STATIC = os.path.join(APP_DIR,'static')
-APP_MEDIA = os.path.join(APP_DIR,'media')
-
+APP_TEMPLATES = os.path.join(APP_DIR, 'templates')
+APP_STATIC = os.path.join(APP_DIR, 'static')
+APP_MEDIA = os.path.join(APP_DIR, 'media')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -38,7 +37,6 @@ SECRET_KEY = '1b)nh)njby%q(zr#@5n6$c6z(=^%^l*zr)17ruzyduxoks3@1y'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -67,7 +65,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [APP_TEMPLATES,],
+        'DIRS': [APP_TEMPLATES, ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,7 +79,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'config.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
@@ -97,22 +94,25 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation'
+                '.UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation'
+                '.MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation'
+                '.CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation'
+                '.NumericPasswordValidator',
     },
 ]
 
@@ -131,12 +131,11 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = 'app/static/'
-STATICFILES_DIRS = [APP_STATIC,]
+STATICFILES_DIRS = [APP_STATIC, ]
 
 MEDIA_ROOT = APP_MEDIA
 MEDIA_URL = '/app/media/'
@@ -144,7 +143,7 @@ MEDIA_URL = '/app/media/'
 SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 
 EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'apikey' # this is exactly the value 'apikey'
+EMAIL_HOST_USER = 'apikey'  # this is exactly the value 'apikey'
 EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
